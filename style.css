@@ -8,7 +8,7 @@
 
   /* font-sizes */
   --fs-400: 1rem;
-  --fs-900: 1.4rem;
+  --fs-900: 1.5rem;
 
   /* font-weights */
   --fw-regular: 500;
@@ -22,7 +22,9 @@
   --clr-neutral-900: 219 29% 14%;
 
   /* accent colors */
-  --clr-violet: 263 55% 52%;
+  --clr-violet-400: 263 55% 52%;
+  --clr-violet-500: 264 82% 70%;
+  --clr-violet-600: 263 55% 52%;
 
   /* spacing */
   --space-m: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem);
@@ -100,8 +102,7 @@ label {
 
 .flow {
   --gap: 1rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--gap);
 }
 
@@ -112,7 +113,7 @@ label {
 
 @media screen and (min-width: 68rem) {
   .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-areas:
       "one   one  two  five"
       "three four four five";
@@ -153,7 +154,7 @@ label {
 }
 
 .card:nth-child(1) {
-  background-color: hsl(var(--clr-violet));
+  background-color: hsl(var(--clr-violet-400));
 }
 
 .card:nth-child(2) {
@@ -209,12 +210,12 @@ label {
   margin-top: 0rem;
 }
 
-.m-margin {
-  --gap: var(var(--fluid-16-24));
+.border-violet-500 {
+  border: 2px solid hsl(var(--clr-violet-500) );
 }
 
-.purple-border {
-  border: 2px solid hsl(var(--clr-neutral-300) / 0.5);
+.border-violet-600 {
+  border: 2px solid hsl(var(--clr-violet-600) );
 }
 
 .visually-hidden {
@@ -232,12 +233,12 @@ label {
 [data-background="image"] {
   background-image: url("images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-size: 153px 156px;
-  background-position: top 0px right 20px;
+  background-size: 9.56rem 9.75rem;
+  background-position: top 0rem right 1.25rem;
 }
 
 @media screen and (min-width: 68rem) {
   [data-background="image"] {
-    background-position: top 0px right 100px;
+    background-position: top 0rem right 6.25rem;
   }
 }
