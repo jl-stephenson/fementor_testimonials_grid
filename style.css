@@ -29,7 +29,7 @@
   /* spacing */
   --space-m: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem);
   --fluid-16-24: clamp(1rem, 0.8261rem + 0.8696vw, 1.5rem);
-  --fluid-71-1000: clamp(4.4375rem, 3.8071r100 + 3.1522vw, 6.25rem);
+  --fluid-71-100: clamp(4.4375rem, 3.8071rem + 3.1522vw, 6.25rem);
 }
 
 /* ----------------- */
